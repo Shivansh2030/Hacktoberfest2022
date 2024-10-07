@@ -1,0 +1,49 @@
+ss Students {
+    int studentId;
+    String studentName;
+    String collegeName;
+    int subjectCount;
+
+    public Students(int studentId, String studentName, String collegeName, int subjectCount) {
+        this.studentId = studentId;
+        this.studentName = studentName;
+        this.collegeName = collegeName;
+        this.subjectCount = subjectCount;
+    }
+
+    public int getStudentId() {
+        return studentId;
+    }
+
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public String getCollegeName() {
+        return collegeName;
+    }
+
+    public int getSubjectCount() {
+        return subjectCount;
+    }
+}
+
+class Subjects extends Students {
+    ArrayList<String> subjects = new ArrayList<>();
+    ArrayList<Integer> marks = new ArrayList<>();
+
+    public Subjects(int studentId, String studentName, String collegeName, int subjectCount,
+                    ArrayList<String> subjects, ArrayList<Integer> marks) {
+        super(studentId, studentName, collegeName, subjectCount);
+        this.subjects = subjects;
+        this.marks = marks;
+    }
+
+    public ArrayList<String> getSubjects() {
+        return subjects;
+    }
+
+    public ArrayList<Integer> getMarks() {
+        return marks;
+    }
+}
